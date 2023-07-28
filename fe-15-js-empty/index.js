@@ -1,17 +1,51 @@
-let studentsNumber = 14
-let course = 'Frontend'
-let groupNumber = 42
+// инпут
+let inputFirst = document.querySelector( '.calculator-input-first')
+let inputSecond = document.querySelector('.calculator-input-second')
 
-// alert(course + ' ' + groupNumber + ' - ' + studentsNumber + ' students')
+//кнопки 
+let buttonPlus = document.querySelector('.calculator-plus')
+let buttonMinus = document.querySelector('.calculator-minus')
+let buttonMultiply = document.querySelector('.calculator-multiply')
+let buttonDevide = document.querySelector('.calculator-devide')
+let buttonEquals = document.querySelector('.calculator-equals')
 
-// alert(`${course}-${groupNumber} - students: ${studentsNumber}`)
-let weather = 'Sunny'
-let sector = 'H'
+//значения 
+let valueOne = null;
+let valueTwo = null;
+let resut = null;
 
-weather = 'Rainy'
+buttonPlus.addEventListener('click', function() {
+    valueOne = inputFirst.value
+    valueTwo = inputSecond.value
 
-if (weather === 'Sunny') {
-  alert('Не бери зонт')
-} else {
-  alert('Возможно будет дождь, возьми зонт')
-}
+    resut = Number(valueOne) + Number(valueTwo)
+   
+})
+
+buttonMinus.addEventListener('click', function () {
+    valueOne= inputFirst.value
+    valueTwo = inputSecond.value
+
+    resut = Number(valueOne) - Number(valueTwo)
+})
+
+buttonMultiply.addEventListener('click', function () {
+    valueOne = inputFirst.value
+    valueTwo = inputSecond.value
+
+    resut = Number(valueOne) * Number(valueTwo)
+
+})
+
+buttonDevide.addEventListener('click', function () {
+    valueOne = inputFirst.value
+    valueTwo = inputSecond.value
+
+    resut= Number(valueOne) / Number(valueTwo)
+
+})
+
+buttonEquals.addEventListener('click', function () {
+    alert('результат :' + resut)
+    
+} )
